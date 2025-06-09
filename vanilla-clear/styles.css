@@ -1,4 +1,14 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+/* i tag to display icons */
+i {
+  color: rgba(147, 115, 175, 0.95);
+  margin-right: 7px;
+}
 
 body {
   color: rgb(255 255 255 / 90%);
@@ -7,12 +17,25 @@ body {
   overflow: hidden;
 }
 
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+/* height for the root element */
 html,
 body,
 #root {
   height: 100%;
 }
 
+/* root element styles 
+  * I like it translucent but you can change it to solid color: 
+  *border-bottom: 1px solid rgb(255 255 255 / 5%);
+  *background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%));
+*/
 #root {
   background: rgba(0, 0, 0, 15%);
 }
@@ -43,6 +66,7 @@ body,
 .logo,
 .binding-mode,
 .tiling-direction,
+.paused-button,
 .network,
 .memory,
 .cpu,
@@ -56,7 +80,7 @@ body,
 }
 
 .workspace {
-  background: rgb(255 255 255 / 5%);
+  background: rgb(255 255 255 / 15%);
   margin-right: 4px;
   padding: 4px 8px;
   color: rgb(255 255 255 / 90%);
@@ -70,12 +94,13 @@ body,
 
   &.focused,
   &:hover {
-    background: rgb(255 255 255 / 50%);
+    background: rgba(147, 115, 175, 0.95);
   }
 }
 
 .binding-mode,
-.tiling-direction {
+.tiling-direction,
+.paused-button {
   background: rgb(255 255 255 / 15%);
   color: rgb(255 255 255 / 90%);
   border-radius: 2px;
@@ -104,7 +129,4 @@ body,
   top: 3px;
 }
 
-i {
-  color: rgb(255 255 255 / 90%);
-  margin-right: 7px;
-}
+

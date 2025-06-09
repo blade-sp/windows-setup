@@ -1,11 +1,18 @@
 {
   "$schema": "https://github.com/glzr-io/zebar/raw/v2.1.0/resources/widget-schema.json",
   "htmlPath": "./vanilla-clear.html",
-  "zOrder": "bottom_most",
+  "zOrder": "top_most",
   "shownInTaskbar": false,
   "focused": false,
   "resizable": false,
   "transparent": true,
+  "caching": {
+    "defaultDuration": 604800,
+    "rules": []
+  },
+  "privileges": {
+    "shellCommands": []
+  },
   "presets": [
     {
       "name": "vanilla-clear",
@@ -16,6 +23,11 @@
       "height": "40px",
       "monitorSelection": {
         "type": "all"
+      },
+      "dockToEdge": {
+        "enabled": false,
+        "edge": null,
+        "windowMargin": "0px"
       }
     }
   ]
