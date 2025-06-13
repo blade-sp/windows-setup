@@ -1,39 +1,30 @@
-# My Windows Config
+# Windows Setup with GlazeWM and Zebar
 
-# My Terminal Setup
+## PowerToys
 
-- [Wezterm](https://wezfurlong.org/wezterm/index.html)
-- [Wezterm Config File](.wezterm.lua)
-
-# Window Manager Setup
-
-- [GlazeWM](https://github.com/glzr-io/glazewm)
-- [GlazeWM Config File](./config.yaml)
-
-# TopBar Setup
-
-- [Zebar](https://github.com/glzr-io/zebar)
-
-To configure Zebar:
-
-1. Copy [vanilla-clear](./vanilla-clear) widget to Zebar directory
-
-```
-cp ./vanilla-clear/ ~/.glzr/zebar/
-```
-
-2. Then disable other widgets in Zebar system tray.
-
-# Searching
+I like to use [PowerToys](https://learn.microsoft.com/en-us/windows/powertoys/) to enhance my Windows experience. Especially for the following features:
 
 - [Powertoys Run](https://learn.microsoft.com/en-us/windows/powertoys/run)
 
-# Translucent Taskbar
+## Window Manager Setup
 
-- [TranslucentTB](https://apps.microsoft.com/detail/9pf4kz2vn4w9?hl=en-US&gl=US)
+I prefer to use a tiling window manager, I use [GlazeWM](https://github.com/glzr-io/glazewm).
+- [GlazeWM Config File](./config.yaml)
 
-# Wallpapers
+GlazeWM comes with the option to use top bar. If you use workspaces, it's a must have.
 
-- [1](https://wallhaven.cc/w/o5jv65)
-- [2](https://wallhaven.cc/w/2evz6x)
-- [3](https://wallhaven.cc/w/exlxjr)
+- [Zebar](https://github.com/glzr-io/zebar)
+
+## Zebar Setup
+
+1. Copy the content of [vanilla-clear](./vanilla-clear) widget to Zebar starter directory
+2. Set vanilla-clear as the default widget in your Zebar config file:
+
+```
+ "startupConfigs": [
+    {
+      "path": "starter/vanilla-clear.zebar.json",
+      "preset": "vanilla-clear"
+    }
+  ]
+``` 
